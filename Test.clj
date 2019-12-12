@@ -19,7 +19,8 @@
 (defn functionBuilder
   [multiplier]
   (do
-    (fn [x] (* x multiplier))))
+    (fn [x] 
+      (* x multiplier))))
 
 (def f (functionBuilder 3))
 (println (f 4))
