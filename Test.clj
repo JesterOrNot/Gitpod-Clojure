@@ -13,5 +13,8 @@
   [a, b, c]
   (do
     (list 
-        (/ (+ (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a))
-        (/ (- (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a)))))
+      (/ (+ (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a))
+      (/ (- (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a)))))
+
+(defn sort
+    )
