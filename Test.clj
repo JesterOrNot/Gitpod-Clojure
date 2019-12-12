@@ -16,5 +16,10 @@
       (/ (+ (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a))
       (/ (- (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a)))))
 
-(defn sort
-    )
+(defn functionBuilder
+  [multiplier]
+  (do
+    (fn [x] (* x multiplier))))
+
+(def f (functionBuilder 3))
+(println (f 4))
