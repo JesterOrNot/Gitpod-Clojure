@@ -12,15 +12,15 @@
 (defn quad
   [a, b, c]
   (do
-    (list 
+    (list
       (/ (+ (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a))
       (/ (- (* b -1) (Math/sqrt (- (Math/pow b 2) (* 4 a c)))) (* 2 a)))))
 
 (defn functionBuilder
   [multiplier]
   (do
-    (fn [x] 
+    (fn [x]
       (* x multiplier))))
 
 (def f (functionBuilder 3))
-(println (f 4))
+(println (map f (list 1 2 3 4)))
