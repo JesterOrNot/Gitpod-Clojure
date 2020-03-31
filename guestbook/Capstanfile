@@ -25,4 +25,3 @@ cmdline: /java.so -jar /guestbook/app.jar
 #
 files:
   /guestbook/app.jar: ./target/uberjar/guestbook.jar
-

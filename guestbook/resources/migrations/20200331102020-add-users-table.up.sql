@@ -8,4 +8,3 @@ CREATE TABLE users (
     is_active BOOLEAN,
     pass VARCHAR(300)
 );
-
