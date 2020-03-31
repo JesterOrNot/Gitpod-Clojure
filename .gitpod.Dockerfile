@@ -9,6 +9,7 @@ RUN curl -O https://download.clojure.org/install/linux-install-1.10.1.492.sh \
     && cd /usr/local/bin \
     && curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein \
     && chmod 755 lein \
+    && export HTTP_CLIENT="wget --no-check-certificate -O"
     && sudo ./lein
 
 # Give access back to gitpod image builder
