@@ -4,8 +4,8 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM clojure:lein
-
+FROM clojure
+USER gitpod
 
 # Give access back to gitpod image builder
 USER root
