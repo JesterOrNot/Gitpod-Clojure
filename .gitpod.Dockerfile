@@ -5,7 +5,10 @@
 #
 
 FROM clojure
-USER gitpod
 
+
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+CMD ["lein", "run"]
 # Give access back to gitpod image builder
 USER root
