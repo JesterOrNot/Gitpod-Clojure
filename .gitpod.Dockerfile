@@ -6,7 +6,7 @@ USER gitpod
 RUN curl -O https://download.clojure.org/install/linux-install-1.10.1.492.sh \
     && chmod +x linux-install-1.10.1.492.sh  \
     && sudo ./linux-install-1.10.1.492.sh \
-    && cd /usr/share \
+    && sudo cd /usr/local/bin \
     && sudo curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein \
     && sudo chmod 755 lein \
     && sudo ./lein
