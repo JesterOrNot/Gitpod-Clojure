@@ -1,14 +1,16 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
+FROM gitpod/workspace-full
 
-FROM clojure
+USER gitpod
 
+# Install Clojure
+RUN curl -O https://download.clojure.org/install/linux-install-1.10.1.492.sh \
+    && chmod +x linux-install-1.10.1.492.sh  \
+    && sudo ./linux-install-1.10.1.492.sh \
+    && cd /usr/local/bin \
+    && curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein \
+    && chmod 755 lein \
+    && export HTTP_CLIENT="wget --no-check-certificate -O" \
+    && sudo ./lein
 
-COPY . /usr/src/app
-WORKDIR /usr/src/app
-CMD ["lein", "run"]
 # Give access back to gitpod image builder
 USER root
